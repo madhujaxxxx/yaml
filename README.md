@@ -1,6 +1,6 @@
 # docker-compose to hello-world
 
-The simplest "docker-compose.yml" to "Hello World" as simple as "docker run hello-world".
+The simplest "docker-compose.yml" to "Hello World" as simple as `docker run hello-world`.
 
 ```yaml
 version: "3"
