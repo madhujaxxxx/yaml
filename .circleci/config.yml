@@ -12,5 +12,6 @@ jobs:
       - run: curl -fsSL https://get.docker.com -o get-docker.sh
       - run: /bin/sh get-docker.sh > /dev/null
       - run: docker version
-      - run: install-docker-compose.sh
+      - run: ls -la
+      - run: ./get-docker-compose.sh
       - run: docker-compose version
