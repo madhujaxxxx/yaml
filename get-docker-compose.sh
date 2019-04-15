@@ -12,4 +12,8 @@ echo -n '- Fetching latest version: '
 version=`curl -s https://api.github.com/repos/docker/compose/releases/latest | grep tag_name | sed -e 's/[^0-9\.]//g'`
 echo $version
 
-curl -L "https://github.com/docker/compose/releases/download/${version}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+path_dir_bin='/usr/local/bin'
+path_file_docker_compose="${path_dir_bin}/docker-compose"
+
+curl -sL "https://github.com/docker/compose/releases/download/${version}/docker-compose-$(uname -s)-$(uname -m)" -o $path_file_docker_compose
+sudo chmod +x $path_file_docker_compose

@@ -9,9 +9,9 @@ jobs:
       - run: apt-get -qq -y install git curl software-properties-common > /dev/null
       - checkout
       - setup_remote_docker
+      - run: echo $PATH
       - run: curl -fsSL https://get.docker.com -o get-docker.sh
-      - run: /bin/sh get-docker.sh > /dev/null
-      - run: docker version
-      - run: ls -la
+      - run: ./get-docker.sh > /dev/null
       - run: ./get-docker-compose.sh
+      - run: docker version
       - run: docker-compose version
