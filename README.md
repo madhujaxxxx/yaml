@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/KEINOS/hello-docker-compose/tree/master.svg?style=svg)](https://circleci.com/gh/KEINOS/hello-docker-compose/tree/master)
+
 # docker-compose to hello-world
 
 The simplest "docker-compose.yml" to "Hello World" as simple as `docker run hello-world`.
