@@ -10,7 +10,7 @@ services:
 ```
 
 - Download: https://keinos.github.io/hello-docker-compose/docker-compose.yml
-- Source: https://github.com/KEINOS/hello-docker-compose/docker-compose.yml
+- Source: https://github.com/KEINOS/hello-docker-compose/blob/master/docker-compose.yml
 
 ## Sample usage
 
