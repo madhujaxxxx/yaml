@@ -5,13 +5,20 @@ jobs:
     docker:
       - image: ubuntu:latest
     steps:
-      - run: apt-get -qq update
-      - run: apt-get -qq -y install git curl software-properties-common > /dev/null
+      - run:
+          name: Installing dependencies 
+          command: apt-get -qq update && apt-get -qq -y install git curl > /dev/null
       - checkout
       - setup_remote_docker
-      - run: echo $PATH
-      - run: curl -fsSL https://get.docker.com -o get-docker.sh
-      - run: ./get-docker.sh > /dev/null
-      - run: ./get-docker-compose.sh
-      - run: docker version
-      - run: docker-compose version
+      - run:
+          name: Installing docker
+          command: curl -fsSL https://get.docker.com -o get-docker.sh && /bin/sh ./get-docker.sh > /dev/null
+      - run:
+          name: Installing docker-compose
+          command: /bin/bash ./get-docker-compose.sh
+      - run:
+          name: Show Versions
+          command: docker version && docker-compose version
+      - run:
+          name: Run test
+          command: docker-compose up
