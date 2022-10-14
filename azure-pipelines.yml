@@ -21,7 +21,12 @@ steps:
     scriptLocation: 'inlineScript'
     inlineScript: 
     echo "Login into Azure"
-  
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'SCDockerToDevops'
+    command: 'login'
+
 
   
     
