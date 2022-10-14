@@ -18,7 +18,8 @@ steps:
     azureSubscription: 'az-sp-devops'
     scriptType: 'pscore'
     scriptLocation: 'inlineScript'
-    inlineScript: |
+    inlineScript: 
+    
 
 - task: Docker@2
   inputs:
