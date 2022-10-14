@@ -20,18 +20,7 @@ steps:
     scriptLocation: 'inlineScript'
     inlineScript: |
     echo "Login into Azure"
-
     
-
-- task: Docker@2
-  inputs:
-    containerRegistry: 'AcrToDevopsConnection'
-    command: 'login'
-- task: Docker@2
-  inputs:
-    containerRegistry: 'AcrToDevopsConnection'
-    repository: 'nginx'
-    command: 'push'
 
 
       
