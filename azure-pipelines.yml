@@ -13,13 +13,7 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- task: AzureCLI@2
-  inputs:
-    azureSubscription: 'az-sp-devops'
-    scriptType: 'pscore'
-    scriptLocation: 'inlineScript'
-    inlineScript: 
-    
+   
 
 - task: Docker@2
   inputs:
