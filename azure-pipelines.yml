@@ -18,4 +18,4 @@ steps:
     azureSubscription: 'az-sp-devops'
     scriptType: 'ps'
     scriptLocation: 'inlineScript'
-    inlineScript: 'az login'
+    inlineScript: az acr login --name migacr.azurecr.io
