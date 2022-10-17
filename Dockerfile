@@ -7,6 +7,7 @@ RUN apt-get -y update && apt-get -y install nginx
 
 COPY index.html /etc/nginx/sites-available/html
 
-EXPOSE 8000
+EXPOSE 80/tcp
 
-RUN html
+RUN rm index.html
+RUN touch index.html
