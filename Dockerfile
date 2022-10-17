@@ -1,15 +1,12 @@
   # syntax=docker/dockerfile:1
 
-FROM node:12.18.1
-ENV NODE_ENV=production
+FROM ubuntu
 
-WORKDIR /app/
 
-COPY ["package.json", "package-lock.json*", "./"]
+RUN apt-get -y update && apt-get -y install nginx
 
-RUN npm install --production
-
-COPY . .
+COPY default /etc/nginx/sites-available/default
 
 EXPOSE 8080
-CMD [ "node", "server.js" ]
+
+CMD [ "/usr/sbin/nginx", "-g", "daemon off;" ]
