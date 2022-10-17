@@ -5,8 +5,8 @@ FROM ubuntu
 
 RUN apt-get -y update && apt-get -y install nginx
 
-COPY default /etc/nginx/sites-available/default
+COPY indext.html /etc/nginx/sites-available/html
 
-EXPOSE 80/tcp
+EXPOSE 8000
 
-CMD [ "/usr/sbin/nginx", "-g", "daemon off;" ]
+RUN html
