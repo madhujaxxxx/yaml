@@ -9,5 +9,4 @@ COPY index.html /etc/nginx/sites-available/html
 
 EXPOSE 80/tcp
 
-RUN rm index.html
-RUN touch index.html
+
